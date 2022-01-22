@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Title of Page -->
+    <title>Dracic</title>
+
+    <!-- Vendors CSS -->
+    <link href="css/vendors/bootstrap-reboot.css" rel="stylesheet">
+    <link href="css/vendors/bootstrap-grid.css" rel="stylesheet">
+
+    <!-- Our external CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Our internal CSS -->
+
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+    <div class="container">
+        <div class="nav-holder">
+
+            <div class="nav-logo-wrapper">
+                <a class="nav-logo" href="#">
+                    <h2>Sebastijan<br>Dračić</h2>
+                </a>
+            </div>
+
+            <div class="nav-toggler-wrapper">
+                <button class="nav-toggler" aria-label="Open/Close Navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div class="nav-list-wrapper">
+                <ul class="nav-list">
+                    <li class="nav-list-item">
+                        <a href="index.html">Početna</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="#page-2.html">Djela</a>
+                    </li>
+                </ul>
+                <ul class="nav-list">
+                    <li class="nav-list-item">
+                        <a href="#page-3.html">Biografija</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="kontakt.html">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</nav>
+<!-- Our internal JS -->
+<script type="text/javascript">
+    // Variables
+    var navToggler = document.querySelector('button.nav-toggler'),
+        navList = document.querySelector('ul.nav-list');
+
+    navToggler.addEventListener('click', function () {
+        this.classList.toggle('open');
+        navList.parentElement.classList.toggle('open');
+    });
+</script>
+
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="img/dracic1.jpg" style="width:100%">
+      <div class="text"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        -S. Dračić</b>
+    </div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="img/dracic2.jpg" style="width:100%">
+      <div class="text"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        -S. Dračić</b>
+    </div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="img/dracic3.jpg" style="width:100%">
+      <div class="text"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        -S. Dračić</b>
+    </div>
+    </div>
+
+    <!-- The dots/circles -->
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+    <br>
+  
+
+<script type="text/javascript">
+    /*slideshow*/
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    }
+</script>
+
+<main class="container-fluid">
+    <div class="row tehnike">
+        <div class="col-sm-12 col-md-4">
+            <a href=#>
+                <img src="img/ulje.jpg">
+                <div class="tehnike-text">ULJANE BOJE</div>
+            </a>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <a href=#>
+                <img src="img/tus.jpg">
+                <div class="tehnike-text">TUŠ</div>
+            </a>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <a href=#>
+                <img src="img/mozaic.jpg">
+                <div class="tehnike-text">MOZAICI</div>
+            </a>
+        </div>
+    </div>
+</main>
+
+<div class="najpoznatija">
+    <h3 style="padding: 10px;">NJAPOZNATIJA DJELA</h3>
+    <div class="row">
+        <div class="col-sm-12 col-md-3">
+                <img class="najslike" src="img/poznata1.jpeg">
+        </div>
+
+        <div class="col-sm-12 col-md-3">
+            <img class="najslike" src="img/poznata2.jpeg">
+        </div>
+
+        <div class="col-sm-12 col-md-3">
+            <img class="najslike" src="img/poznata3.jpeg">
+        </div>
+
+        <div class="col-sm-12 col-md-3">
+            <img class="najslike" src="img/poznata4.jpg">
+        </div>  
+    </div>   
+</div>
+
+<footer>
+    <b>Copyright Ⓒ 2022 Borna Delić</b>
+</footer>
+
+</body>
+</html>
