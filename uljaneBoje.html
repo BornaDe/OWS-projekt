@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Title of Page -->
+    <title>Dracic</title>
+
+    <!-- Vendors CSS -->
+    <link href="css/vendors/bootstrap-reboot.css" rel="stylesheet">
+    <link href="css/vendors/bootstrap-grid.css" rel="stylesheet">
+
+    <!-- Our external CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Our internal CSS -->
+
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-holder">
+
+                <div class="nav-logo-wrapper">
+                    <a class="nav-logo" href="index.html">
+                        <h1>Sebastijan Dračić</h1>
+                    </a>
+                </div>
+
+                <div class="nav-toggler-wrapper">
+                    <button class="nav-toggler" aria-label="Open/Close Navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <div class="nav-list-wrapper">
+                    <ul class="nav-list">
+                        <li class="nav-list-item">
+                            <a href="index.html">Početna</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <a href="djela.html">Djela</a>
+                        </li>
+                    </ul>
+                    <ul class="nav-list">
+                        <li class="nav-list-item">
+                            <a href="biografija.html">Biografija</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <a href="kontakt.html">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </nav>  
+
+    <!-- Our internal JS -->
+    <script type="text/javascript">
+        // Variables
+        var navToggler = document.querySelector('button.nav-toggler'),
+            navList = document.querySelector('ul.nav-list');
+
+        navToggler.addEventListener('click', function () {
+            this.classList.toggle('open');
+            navList.parentElement.classList.toggle('open');
+        });
+    </script>
+
+    <main  class="container-fluid">
+        <h2 class="naslov">Uljane Boje</h2>
+        <div class="row djela">
+            <a href="djelo.html" class="col-sm-12 col-md-3">
+            <img src="img/djelo1.jpg">
+            </a>
+            <img class="col-sm-12 col-md-3" src="img/dracic3.jpg">
+            <img class="col-sm-12 col-md-3" src="img/poznata4.jpg">
+            <img class="col-sm-12 col-md-3" src="img/djelo4.jpg">
+        </div>
+        <div class="row djela">
+            <img class="col-sm-12 col-md-3" src="img/djelo9.jpg">
+            <img class="col-sm-12 col-md-3" src="img/djelo10.jpg">
+        </div>
+    </main>
+
+    <footer>
+        <b>Copyright Ⓒ 2022 Borna Delić</b>
+    </footer>
+
+</body>
